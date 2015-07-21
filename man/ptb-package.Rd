@@ -5,7 +5,7 @@
 \alias{ptb-package}
 \title{ptb}
 \description{
-Prevalence estimation and diagnostic test evaluation using Bayesian simulations
+Prevalence estimation and diagnostic test evaluation in a Bayesian framework
 }
 \details{
 \tabular{ll}{

@@ -1,6 +1,6 @@
 Package: ptb
 Type: Package
-Title: Prevalence estimation and diagnostic test evaluation using Bayesian simulations
+Title: Prevalence estimation and diagnostic test evaluation in a Bayesian framework
 Depends:
     R (>= 3.2.1)
 Imports:
