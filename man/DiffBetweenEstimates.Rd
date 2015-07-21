@@ -2,7 +2,7 @@
 % Please edit documentation in R/DiffBetweenEstimates.R
 \name{DiffBetweenEstimates}
 \alias{DiffBetweenEstimates}
-\title{Dfference between estimated parameters.}
+\title{Difference between estimated parameters}
 \usage{
 DiffBetweenEstimates(estimates)
 }
@@ -10,7 +10,7 @@ DiffBetweenEstimates(estimates)
 \item{estimates}{\code{\link{list}} with two objects of class \code{mcmc.list}. These objects must have the same number of chains and the chains must have the same length.}
 }
 \value{
-a list of class \code{mcmc.list}.
+A list of class \code{mcmc.list}.
 }
 \description{
 Vectorized difference between chains of two objects of \code{\link{class}} \code{mcmc.list}.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/OneTestOnePopBM.R
 \name{OneTestOnePopBM}
 \alias{OneTestOnePopBM}
-\title{1 test and 1 population binomial model.}
+\title{1 test and 1 population binomial model}
 \usage{
 OneTestOnePopBM(dataset, inits, priors, pars, n.iter = 10000, n.chains = 3,
   burn.in = 1000, thin = 1)
@@ -14,7 +14,7 @@ OneTestOnePopBM(dataset, inits, priors, pars, n.iter = 10000, n.chains = 3,
 
 \item{priors}{\code{\link{vector}} with the parameters a and b (Beta distribution) for the true prevalence, the sensitivity and the specificity. The names of these values must be: "true.prev.a", "true.prev.b", "se.a", "se.b", "sp.a" and "sp.b".}
 
-\item{pars}{character vector giving the names of parameters to be monitored. It is passed to the \code{variable.names} argument of the \code{\link{coda.samples}} function. In addition to the parameters specified in \code{inits}, the apparent prevalence and the posistive and negative predicitve values can be monitored if specified in \code{pars} as "app.prev", "ppv" and "npv", respectively.}
+\item{pars}{character vector giving the names of parameters to be monitored. It is passed to the \code{variable.names} argument of the \code{\link{coda.samples}} function. In addition to the parameters specified in \code{inits}, the apparent prevalence and the positive and negative predictive values can be monitored if specified in \code{pars} as "app.prev", "ppv" and "npv", respectively.}
 
 \item{n.iter}{number of iterations to monitor. It is passed to the \code{n.iter} argument of the \code{\link{coda.samples}} function.}
 
@@ -25,10 +25,13 @@ OneTestOnePopBM(dataset, inits, priors, pars, n.iter = 10000, n.chains = 3,
 \item{thin}{thinning interval for monitors. It is passed to the \code{thin} argument of the \code{\link{coda.samples}} function.}
 }
 \value{
-a \code{\link{list}} of class \code{mcmc.list}.
+A \code{\link{list}} of class \code{mcmc.list}.
 }
 \description{
 1 test and 1 population binomial model to estimate prevalence and diagnostic-test-related meassures.
+}
+\details{
+This function creates a text file with the model and it is saved in the working directory.
 }
 \examples{
 # Data.

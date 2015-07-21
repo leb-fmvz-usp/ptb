@@ -2,7 +2,7 @@
 % Please edit documentation in R/ElicitBeta.R
 \name{ElicitBeta}
 \alias{ElicitBeta}
-\title{Parameterization of a Beta distribution.}
+\title{Parameterization of a Beta distribution}
 \usage{
 ElicitBeta(mode, confidence, maximum = NULL, minimum = NULL,
   summary = FALSE, quantiles = c(0.025, 0.25, 0.5, 0.75, 0.975))
@@ -10,7 +10,7 @@ ElicitBeta(mode, confidence, maximum = NULL, minimum = NULL,
 \arguments{
 \item{mode}{scalar representing the elicited mode of the variable of interest. Must be a number between 0 and 1.}
 
-\item{confidence}{scalar representing the the level of confidence on the definition of \code{maximum} or \code{minimumt}. Must be a number between 0 and 1.}
+\item{confidence}{scalar representing the the level of confidence on the definition of \code{maximum} or \code{minimum}. Must be a number between 0 and 1.}
 
 \item{maximum}{scalar representing the elicited maximum value of the variable of interest. Must be a number between 0 and 1.}
 
