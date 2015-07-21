@@ -1,2 +1,4 @@
-# ptb
-R package for Prevalence estimation and diagnostic Test evaluation using Bayesian simulations
+petebs
+======
+
+The R package `ptb` has functions for prevalence estimation and diagnostic test evaluation using Bayesian simulations.

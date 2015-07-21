@@ -1,0 +1,18 @@
+Package: ptb
+Type: Package
+Title: Prevalence estimation and diagnostic test evaluation using Bayesian simulations
+Depends:
+    R (>= 3.2.1)
+Imports:
+    rjags
+Suggests:
+    coda,
+    ggmcmc
+Description: Prevalence estimation and diagnostic test evaluation using Bayesian simulations.
+License: GPL (>= 3)
+LazyLoad: yes
+URL: https://github.com/oswaldosantos/ptb
+Authors@R: c(person(given='Oswaldo', family='Santos Baquero',
+    email='oswaldosant@gmail.com', role=c("aut", "cre")))
+Version: 0.0.1
+Date: 2015-07-12

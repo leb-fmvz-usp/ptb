@@ -1,0 +1,6 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+dev_tools
+function-dependencies-in-examples
+LICENSE
+model.txt
