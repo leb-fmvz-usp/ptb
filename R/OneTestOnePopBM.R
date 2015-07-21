@@ -8,6 +8,7 @@
 #' @param burn.in the number of iteration to be discarded. It is passed to the \code{n.iter} argument of the \code{\link{update.jags}} function.
 #' @param thin thinning interval for monitors. It is passed to the \code{thin} argument of the \code{\link{coda.samples}} function.
 #' @param n.iter number of iterations to monitor. It is passed to the \code{n.iter} argument of the \code{\link{coda.samples}} function.
+#' @details This function creates a text file with the model and it is saved in the working directory.
 #' @return A \code{\link{list}} of class \code{mcmc.list}.
 #' @references https://dl.dropboxusercontent.com/u/49022/diagnostictests/index.html
 #' @export
