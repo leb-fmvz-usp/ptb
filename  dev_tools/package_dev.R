@@ -1,17 +1,18 @@
 library(devtools)
 
 # Development workflow
+install()
 load_all()
 document()
-install()
+
+# Checking
+run_examples()
+check_doc()
+check()
 
 # News preview
 show_news()
 
-# Checking
-check()
-check_doc()
-run_examples()
 #build_win()
 
 # Update version in:
