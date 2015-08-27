@@ -11,8 +11,8 @@ Prevalence estimation and diagnostic test evaluation in a Bayesian framework
 \tabular{ll}{
 Package: \tab ptb\cr
 Type: \tab Package\cr
-Version: \tab 0.0.1\cr
-Date: \tab 2015-07-12\cr
+Version: \tab 0.0.2\cr
+Date: \tab 2015-08-26\cr
 Depends: \tab R (>= 3.2.1)\cr
 Imports: \tab rjags\cr
 Suggests: \tab coda, ggmcmc\cr
