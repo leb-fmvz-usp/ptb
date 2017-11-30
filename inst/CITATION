@@ -3,7 +3,7 @@ citHeader("To cite ptb in publications, please use:")
 citEntry(entry = "Misc",
   author = c(person("Oswaldo", "Santos Baquero")),
   title = "ptb: Prevalence Estimation and Diagnostic Test Evaluation in a Bayesian Framework",
-  year = "2015",
-  url = "https://github.com/oswaldosantos/ptb",
-  textVersion = "Oswaldo Santos Baquero (2015). ptb: Prevalence Estimation and Diagnostic Test Evaluation in a Bayesian Framework. https://github.com/oswaldosantos/ptb"
+  year = "2017",
+  url = "https://github.com/leb-fmvz-usp/ptb",
+  textVersion = "Oswaldo Santos Baquero (2017). ptb: Prevalence Estimation and Diagnostic Test Evaluation in a Bayesian Framework. https://github.com/leb-fmvz-usp/ptb"
 )

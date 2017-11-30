@@ -2,7 +2,7 @@ Package: ptb
 Type: Package
 Title: Prevalence Estimation and Diagnostic Test Evaluation in a Bayesian Framework
 Depends:
-    R (>= 3.2.1)
+    R (>= 3.4.2)
 Imports:
     rjags
 Suggests:
@@ -13,6 +13,7 @@ License: GPL (>= 3)
 LazyLoad: yes
 URL: https://github.com/oswaldosantos/ptb
 Authors@R: c(person(given='Oswaldo', family='Santos Baquero',
-    email='oswaldosant@gmail.com', role=c("aut", "cre")))
-Version: 0.0.2
-Date: 2015-08-26
+    email='baquero@usp.br', role=c("aut", "cre")))
+Version: 0.0.3
+Date: 2017-11-30
+RoxygenNote: 6.0.1
