@@ -75,6 +75,7 @@ priors <- c(true_prev_a = 1, true_prev_b = 1,
 prev_est <- OneTestOnePopBM(dataset = dataset, inits = inits,
                             priors = priors,
                             pars = c('true_prev', 'ppv', 'npv'))
+summary(prev_est)
 ```
 
 ### One test and one population binomial mixture model
@@ -86,8 +87,10 @@ prev_est <- OneTestOnePopBM(dataset = dataset, inits = inits,
 dataset <- list(pop_size = 91, positives = 1)
 
 # Priors
-priors <- list(true_prev_wph_a = 1.8, true_prev_wph_b = 26.74, se_a = 6.28,
-               se_b = 13.32, sp_a = 212.12, sp_b = 3.13, prev_h = 0.1)
+priors <- list(true_prev_wph_a = 1.8, true_prev_wph_b = 26.74,
+               se_a = 6.28, se_b = 13.32,
+               sp_a = 212.12, sp_b = 3.13,
+               prev_h = 0.1)
                
 
 # Prevalence estimates
@@ -124,7 +127,7 @@ summary(diffs)
 
 ### Diagnostics
 
-Other advantage of the `ptb` package is its integration with other R packages.
+The model outputs are ready for diagnostics.
 
 ```{r}
 gelman.diag(prev_est)
