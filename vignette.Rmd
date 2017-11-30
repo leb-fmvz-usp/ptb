@@ -1,14 +1,19 @@
+---
+output: "pdf_document"
+---
+
 # ptb: an R package for prevalence estimation and diagnostic test evaluation in a Bayesian framework
 
 ## Oswaldo Santos Baquero
-baquero@usp.br
+
+### contact: baquero@usp.br
 
 
-The R package `ptb` has functions for prevalence estimation, diagnostic test evaluation and prior elicitation. It follows a Bayesian framework and uses [JAGS](http://sourceforge.net/projects/mcmc-jags/) as a backend. Some of the functions are high-level R versions of [WinBUGS codes](http://cadms.ucdavis.edu/diagnostictests/index.html) and future versions of the `ptb` will translate more of these WinBUGS codes.
+The R package `ptb` has functions for prevalence estimation, diagnostic test evaluation and prior elicitation. It follows a Bayesian framework and uses JAGS (http://sourceforge.net/projects/mcmc-jags/) as a backend. Some of the functions are high-level R versions of WinBUGS codes (http://cadms.ucdavis.edu/diagnostictests/index.html) and future versions of the `ptb` will translate more of these WinBUGS codes.
 
 ### Installation
 
-After [installing](http://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/) JAGS, use the following commands:  
+After installing JAGS (http://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/), use the following commands:  
 
 ```{r, eval=FALSE}
 library(devtools)  
@@ -20,7 +25,9 @@ install_github("leb-fmvz-usp/ptb")
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r}
+## Load packages
+
+```{r, message=FALSE, warning=FALSE}
 library(ptb); library(coda); library(ggmcmc)
 ```
 
