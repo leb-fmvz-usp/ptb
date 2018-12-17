@@ -1,0 +1,10 @@
+model
+{
+y ~ dbin(ap, n)
+ap <- pi * se + (1 - pi) * (1 - sp)
+z ~ dbern(inf)
+se ~ dbeta(103, 118)
+sp ~ dbeta(275, 40)
+pistar ~dbeta(1, 1)
+pi <- z * pistar
+}

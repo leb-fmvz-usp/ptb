@@ -1,0 +1,10 @@
+model
+{
+y ~ dbin(p, n)
+p <- pi * se + (1 - pi) * (1 - sp)
+se ~ dbeta(22.5, 10.22)
+sp ~ dbeta(88.28, 1.882)
+pi ~ dbeta(1.8, 26.74)
+ppv <- pi * se / p
+npv <- (1 - pi) * sp / (1 - p)
+}

@@ -1,0 +1,25 @@
+model{
+for(i in 1:29)
+{
+prob.tpos[i] <- pi[i]*Se + (1-pi[i])*(1-Sp) 
+y[i] ~ dbin(prob.tpos[i], n) 
+inf[i] ~ dbern(tau) 
+pi.star[i] ~ dbeta(alpha,beta) 
+pi[i] <- pi.star[i] * inf[i] 
+}
+Se ~ dbeta(58.8, 174.5)
+Sp ~ dbeta(272.4, 6.5)
+tau ~ dbeta(4.8, 3.6) 
+alpha <- mu*psi
+beta <- psi*(1-mu)
+mu ~ dbeta(3.283, 17.744)
+psi ~ dgamma(2, 0.1) 
+## Predictions
+Z30 ~ dbern(tau)
+pistar30 ~ dbeta(alpha,beta)
+pi30 <- Z30*pistar30
+a1 <- 1-step(pi30 - 0.05)
+a2 <- 1-step(pi30-0.5)
+a3 <- equals(pi30,0)
+b1 <- step(tau-0.50)
+}
