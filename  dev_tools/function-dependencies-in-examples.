@@ -1,3 +1,0 @@
-Function's dependencies in examples.
-PlotElicitedPrior uses: ElicitBeta.
-DiffBetweenEstimates uses: OneTestOnePopBM.
