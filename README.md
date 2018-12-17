@@ -1,7 +1,7 @@
 ptb
 ===
 
-The R package `ptb` has functions for prevalence estimation, diagnostic test evaluation and prior elicitation. It follows a Bayesian framework and uses [JAGS](http://sourceforge.net/projects/mcmc-jags/) as a backend. Some of the functions are high-level R versions of [WinBUGS codes](http://cadms.ucdavis.edu/diagnostictests/index.html) and future versions of the `ptb` will translate more of these WinBUGS codes.
+The ptb  R package is a work in progress to implement functions, under a Bayesian framework, for prevalence estimation, diagnostic test evaluation and prior elicitation. The ptb runs with JAGS (http://sourceforge.net/projects/mcmc-jags/) as backend. The functions implemented so far are generalizations of code presented by professor Ian Garner in a course he offered in São Paulo, Brazil. As ptb functions return R objects, other nice packages can be used for model diagnostics.
 
 ### Installation
 
