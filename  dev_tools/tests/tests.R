@@ -140,7 +140,7 @@ q1(prev_est, lessthan = .5, par = "pred_true_prev_h")
 q1(prev_est, equal = 0, par = "pred_true_prev_h")
 q1(prev_est, greaterthan = .5, par = "prev_h")
 
-## Two dependent tests two populations and no gold standard --------------------
+## Two dependent tests one population and no gold standard ---------------------
 
 ## Terms
 # ---------------------------------------------------------------------
@@ -151,8 +151,8 @@ q1(prev_est, greaterthan = .5, par = "prev_h")
 
 ## ptb
 dataset <- list(pop_size = 214,
-                t_res = c(t1p_t2p = 121, t1p_t2_n = 6,
-                          t1n_t2_p = 16, t1n_t2n = 71))
+                t_res = c(t1p_t2p = 121, t1p_t2n = 6,
+                          t1n_t2p = 16, t1n_t2n = 71))
 priors <- c(pi_a = 13.322, pi_b = 6.281,
             se_test1_a = 9.628, se_test1_b = 3.876,
             sp_test1_a = 15.034, sp_test1_b = 2.559,
@@ -162,9 +162,8 @@ est <- TwoDepTestsOnePopNGS(dataset = dataset, n_iter = 3e3,
                             priors = priors, pars = c("se_test1", "se_test2"))
 
 ## OpenBUGS
-dataset_ob <- list(pop_size = 214,
-                   x = c(t1p_t2p = 121, t1p_t2_n = 6,
-                         t1n_t2_p = 16, t1n_t2n = 71))
+dataset_ob <- list(n = 214, x = c(121, 6, 16, 71))
+pars_ob <- c("Sefat1", "Sefat2")
 pars_ob <- c("se_test1", "se_test2")
 prev_est_ob <- bugs(dataset_ob,
                     inits = NULL,

@@ -1,20 +1,20 @@
 model{
-  x[1:4] ~ dmulti(p[1:4], pop_size)
-  p[1] <- pi*(se_test1*se_test2+covDp) + (1-pi)*((1-sp_test1)*(1-sp_test2)+covDn)
-  p[2] <- pi*(se_test1*(1-se_test2)-covDp) + (1-pi)*((1-sp_test1)*sp_test2-covDn)
-  p[3] <- pi*((1-se_test1)*se_test2-covDp) + (1-pi)*(sp_test1*(1-sp_test2)-covDn)
-  p[4] <- pi*((1-se_test1)*(1-se_test2)+covDp) + (1-pi)*(sp_test1*sp_test2+covDn)
-  ls <- (se_test1-1)*(1-se_test2)
-  us <- min(se_test1,se_test2) - se_test1*se_test2
-  lc <- (sp_test1-1)*(1-sp_test2)
-  uc <- min(sp_test1,sp_test2) - sp_test1*sp_test2
-  pi ~ dbeta(13.322, 6.281)
-  se_test1 ~ dbeta(9.628,3.876)
-  sp_test1 ~ dbeta(15.034, 2.559)
-  se_test2 ~ dbeta(9.628, 3.876) 
-  sp_test2 ~ dbeta(15.034, 2.559)
-  covDn ~ dunif(lc, uc)
-  covDp ~ dunif(ls, us)
-  rhoD <- covDp / sqrt(se_test1*(1-se_test1)*se_test2*(1-se_test2))
-  rhoDc <- covDn / sqrt(sp_test1*(1-sp_test1)*sp_test2*(1-sp_test2))
+x[1:4] ~ dmulti(p[1:4], n)
+p[1] <- pi*(Sefat1*Sefat2+covDp) + (1-pi)*((1-Spfat1)*(1-Spfat2)+covDn)
+p[2] <- pi*(Sefat1*(1-Sefat2)-covDp) + (1-pi)*((1-Spfat1)*Spfat2-covDn)
+p[3] <- pi*((1-Sefat1)*Sefat2-covDp) + (1-pi)*(Spfat1*(1-Spfat2)-covDn)
+p[4] <- pi*((1-Sefat1)*(1-Sefat2)+covDp) + (1-pi)*(Spfat1*Spfat2+covDn)
+ls <- (Sefat1-1)*(1-Sefat2)
+us <- min(Sefat1,Sefat2) - Sefat1*Sefat2
+lc <- (Spfat1-1)*(1-Spfat2)
+uc <- min(Spfat1,Spfat2) - Spfat1*Spfat2
+pi ~ dbeta(13.322, 6.281) ### Mode=0.70, 95% sure > 0.50
+Sefat1 ~ dbeta(9.628,3.876) ### Mode=0.75, 95% sure > 0.50
+Spfat1 ~ dbeta(15.034, 2.559) ### Mode=0.90, 95% sure > 0.70
+Sefat2 ~ dbeta(9.628, 3.876) ### Mode=0.75, 95% sure > 0.50
+Spfat2 ~ dbeta(15.034, 2.559) ### Mode=0.90, 95% sure > 0.70
+covDn ~ dunif(lc, uc)
+covDp ~ dunif(ls, us)
+rhoD <- covDp / sqrt(Sefat1*(1-Sefat1)*Sefat2*(1-Sefat2))
+rhoDc <- covDn / sqrt(Spfat1*(1-Spfat1)*Spfat2*(1-Spfat2))
 }
