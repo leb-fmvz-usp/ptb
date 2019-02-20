@@ -2,7 +2,9 @@
 
 export(DiffBetweenEstimates)
 export(ElicitBeta)
+export(OneTestMultPopBMM)
 export(OneTestOnePopBM)
 export(OneTestOnePopBMM)
 export(PlotElicitedPrior)
+export(TwoDepTestsOnePopNGS)
 import(rjags)

@@ -1,0 +1,20 @@
+model{
+  x[1:4] ~ dmulti(p[1:4], pop_size)
+  p[1] <- pi*(se_test1*se_test2+covDp) + (1-pi)*((1-sp_test1)*(1-sp_test2)+covDn)
+  p[2] <- pi*(se_test1*(1-se_test2)-covDp) + (1-pi)*((1-sp_test1)*sp_test2-covDn)
+  p[3] <- pi*((1-se_test1)*se_test2-covDp) + (1-pi)*(sp_test1*(1-sp_test2)-covDn)
+  p[4] <- pi*((1-se_test1)*(1-se_test2)+covDp) + (1-pi)*(sp_test1*sp_test2+covDn)
+  ls <- (se_test1-1)*(1-se_test2)
+  us <- min(se_test1,se_test2) - se_test1*se_test2
+  lc <- (sp_test1-1)*(1-sp_test2)
+  uc <- min(sp_test1,sp_test2) - sp_test1*sp_test2
+  pi ~ dbeta(13.322, 6.281)
+  se_test1 ~ dbeta(9.628,3.876)
+  sp_test1 ~ dbeta(15.034, 2.559)
+  se_test2 ~ dbeta(9.628, 3.876) 
+  sp_test2 ~ dbeta(15.034, 2.559)
+  covDn ~ dunif(lc, uc)
+  covDp ~ dunif(ls, us)
+  rhoD <- covDp / sqrt(se_test1*(1-se_test1)*se_test2*(1-se_test2))
+  rhoDc <- covDn / sqrt(sp_test1*(1-sp_test1)*sp_test2*(1-sp_test2))
+}
