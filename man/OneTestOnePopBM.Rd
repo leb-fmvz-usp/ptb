@@ -4,8 +4,8 @@
 \alias{OneTestOnePopBM}
 \title{1 test and 1 population binomial model}
 \usage{
-OneTestOnePopBM(dataset, inits, priors, pars, n_iter = 10000, n_chains = 3,
-  burn_in = 1000, thin = 1)
+OneTestOnePopBM(dataset, inits, priors, pars, n_iter = 10000,
+  n_chains = 3, burn_in = 1000, thin = 1)
 }
 \arguments{
 \item{dataset}{\code{\link{list}} with the population size and the number of positives. The names of these values must be "pop_size" and "positives" respectively.}
