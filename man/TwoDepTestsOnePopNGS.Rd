@@ -2,7 +2,7 @@
 % Please edit documentation in R/TwoDepTestsOnePopNGS.R
 \name{TwoDepTestsOnePopNGS}
 \alias{TwoDepTestsOnePopNGS}
-\title{Two dependent tests, two populations and no gold standard}
+\title{Two dependent tests, one populations and no gold standard}
 \usage{
 TwoDepTestsOnePopNGS(dataset, inits, priors, pars, n_iter = 10000,
   n_chains = 3, burn_in = 1000, thin = 1)
@@ -28,7 +28,7 @@ TwoDepTestsOnePopNGS(dataset, inits, priors, pars, n_iter = 10000,
 A \code{\link{list}} of class \code{mcmc.list}.
 }
 \description{
-2 tests and 1 population binomial model to estimate prevalence and diagnostic test related meassures.
+2 tests and 1 population ...
 }
 \details{
 This function creates a text file with the model and it is saved in the working directory.

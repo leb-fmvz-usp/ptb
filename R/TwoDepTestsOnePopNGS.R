@@ -1,5 +1,5 @@
-#' @title Two dependent tests, two populations and no gold standard
-#' @description 2 tests and 1 population binomial model to estimate prevalence and diagnostic test related meassures.
+#' @title Two dependent tests, one populations and no gold standard
+#' @description 2 tests and 1 population ...
 #' @param dataset \code{\link{list}} with the population size and test results. The names of these values must be "pop_size" and "t_res" respectively. \code{t_res} is a named vector with the number of animals thesting postive in both tests "t1p_t2p", testing positive in the first and negative in the second "t1p_t2n", testing negative in the second and positive in the second "t1n_t2p", and testing positive in both "t1n_t2n".
 #' @param inits \code{\link{list}} with initial conditions for chains. \code{inits} must define initial values for pi, se_test1, sp_test1, se_test2 and sp_test2.
 #' @param priors \code{\link{vector}} with the parameters a and b (Beta distribution) for pi, se_test1, sp_test1, se_test2 and sp_test2..
